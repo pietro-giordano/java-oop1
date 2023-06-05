@@ -1,12 +1,15 @@
 package org.lessons.java.bank;
 
+import java.util.Random;
+
 public class Wallet {
     private int number;
     private String name;
     private double balance;
 
-    public Wallet(int number, String name, double balance) {
-        this.number = number;
+    public Wallet(String name) {
+        Random number = new Random();
+        this.number = number.nextInt(999) + 1;
         this.name = name;
         this.balance = 0;
     }
