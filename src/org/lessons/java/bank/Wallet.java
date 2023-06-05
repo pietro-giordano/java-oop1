@@ -1,5 +1,6 @@
 package org.lessons.java.bank;
 
+import java.text.DecimalFormat;
 import java.util.Random;
 
 public class Wallet {
@@ -32,6 +33,11 @@ public class Wallet {
 
     public void addMoney(double money) {
         this.balance += money;
+    }
+
+    public String getFormattedBalance() {
+        DecimalFormat format = new DecimalFormat("0.00");
+        return format.format(getBalance()) + "€";
     }
 
     public void getMoney(double money) {

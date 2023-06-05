@@ -27,12 +27,12 @@ public class Bank {
                 case 1:
                     System.out.println("Quanto vuoi versare?");
                     newWallet.addMoney(scanner.nextDouble());
-                    System.out.println("Saldo attuale: " + newWallet.getBalance());
+                    System.out.println("Saldo attuale: " + newWallet.getFormattedBalance());
                     break;
                 case 2:
                     System.out.println("Quanto vuoi prelevare?");
                     newWallet.getMoney(scanner.nextDouble());
-                    System.out.println("Saldo attuale: " + newWallet.getBalance());
+                    System.out.println("Saldo attuale: " + newWallet.getFormattedBalance());
                     break;
                 default:
                     System.out.println("Scelta errata, riprova.");
