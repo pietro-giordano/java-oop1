@@ -55,7 +55,7 @@ public class Product {
     }
 
     public double getIvaPrice() {
-        return this.price + (this.price * this.iva);
+        return this.price + (this.price * ((double) this.iva / 100));
     }
 
     public String getCodeName() {
