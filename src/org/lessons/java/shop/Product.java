@@ -1,5 +1,7 @@
 package org.lessons.java.shop;
 
+import java.util.Random;
+
 public class Product {
     private int code;
     private String name;
@@ -7,8 +9,9 @@ public class Product {
     private double price;
     private int iva;
 
-    public Product(int code, String name, String description, double price, int iva) {
-        this.code = code;
+    public Product(String name, String description, double price, int iva) {
+        Random code = new Random();
+        this.code = code.nextInt(89999999) + 10000000;
         this.name = name;
         this.description = description;
         this.price = price;
@@ -49,5 +52,13 @@ public class Product {
 
     public void setIva(int iva) {
         this.iva = iva;
+    }
+
+    public double getIvaPrice() {
+        return this.price + (this.price * this.iva);
+    }
+
+    public String getCodeName() {
+        return this.code + "-" + this.name;
     }
 }
