@@ -34,6 +34,8 @@ public class Bank {
                     newWallet.getMoney(scanner.nextDouble());
                     System.out.println("Saldo attuale: " + newWallet.getBalance());
                     break;
+                default:
+                    System.out.println("Scelta errata, riprova.");
             }
         } while (!flag);
     }
